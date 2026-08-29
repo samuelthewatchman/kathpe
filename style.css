@@ -420,14 +420,28 @@ footer {
 
 @media (max-width: 600px) {
   nav {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 16px;
+    -webkit-overflow-scrolling: touch;
   }
+
   nav a {
-    margin: 4px 8px;
+    margin: 0 10px;
+    flex-shrink: 0;
   }
+
+  #themeToggle {
+    flex-shrink: 0;
+    margin-left: 10px;
+  }
+
   .card-img {
     height: 120px;
   }
+
   header h1 {
     font-size: 2rem;
   }
@@ -793,4 +807,11 @@ body {
 
 body.fade-out {
   opacity: 0;
+}
+.doctor-card h3 {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: normal;
+  font-size: 1rem;
 }
