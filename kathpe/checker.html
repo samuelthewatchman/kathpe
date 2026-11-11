@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symptom Checker - KATH P.E</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <div class="logo-title">
+    <img src="assets/kath-logo.png" alt="Komfo Anokye Teaching Hospital Logo" class="site-logo">
+    <h1>KATH P.E</h1>
+  </div>
+  <p class="header-subtitle">Komfo Anokye Teaching Hospital Patient Education</p>
+  <div class="header-chips">
+    <span class="chip">🩺 Free to use</span>
+    <span class="chip">🗣️ Simple words</span>
+    <span class="chip">📱 Works on phone</span>
+  </div>
+</header>
+
+  <nav>
+  <a href="index.html">Home</a>
+  <a href="doctors.html">Doctors</a>
+  <a href="checker.html">Checker</a>
+  <a href="feedback.html">Feedback</a>
+  <a href="about.html">About</a>
+</nav>
+
+  <div class="container">
+    <div class="content-box">
+      <h2>🩺 What's Bothering You?</h2>
+      <p><span class="highlight">This is not a diagnosis.</span> It only points you to a topic to read. Always see a real doctor.</p>
+
+      <div class="checker-tabs">
+        <button class="tab-btn active" data-tab="text">🗣️ Describe it</button>
+        <button class="tab-btn" data-tab="list">☑️ Pick symptoms</button>
+      </div>
+
+      <!-- Free text mode -->
+      <div id="tab-text" class="tab-panel active">
+        <textarea id="symptomText" rows="4" placeholder="Example: I have a fever and my body is shaking, I feel cold too..."></textarea>
+        <button class="speak-btn" style="width:100%; margin-top:10px;" onclick="analyzeText()">Check 🔍</button>
+      </div>
+
+      <!-- Checklist mode -->
+      <div id="tab-list" class="tab-panel">
+        <div id="symptomChecklist" class="symptom-checklist"></div>
+        <button class="speak-btn" style="width:100%; margin-top:10px;" onclick="analyzeChecklist()">Check 🔍</button>
+      </div>
+
+      <!-- Results -->
+      <div id="checkerResults" style="margin-top:24px;"></div>
+    </div>
+  </div>
+
+  <a href="https://wa.me/233XXXXXXXXX" class="whatsapp-btn" target="_blank">💬</a>
+
+  <footer>
+    This site is only for learning. Always see a real doctor at the hospital.
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="checker.js"></script>
+</body>
+</html>
